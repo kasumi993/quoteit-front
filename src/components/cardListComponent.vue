@@ -1,5 +1,5 @@
 <template>
-  <div class="card-list w-full max-w-md p-4 rounded-lg shadow sm:p-8">
+  <div class="card-list bg-gray-900 w-full max-w-md p-4 rounded-lg shadow sm:p-8">
     <div class="flow-root">
       <ul
         role="list"
@@ -10,16 +10,16 @@
             <div class="flex-shrink-0">
               <img
                 class="w-8 h-8 rounded-full"
-                src="@/assets/banner.png"
+                src="https://placehold.co/600x600/gray/white"
                 alt="Neil image"
               >
             </div>
             <div class="flex-1 min-w-0 ms-4">
               <p class="text-sm font-medium truncate text-white">
-                Personnages Marvels
+                "The only limit to our realization of tomorrow is our doubts of today."
               </p>
               <p class="text-sm truncate text-gray-400">
-                Meilleur personnage
+                Marie Collins
               </p>
             </div>
             <div>
@@ -27,7 +27,7 @@
                 320
               </div>
               <p class="text-sm truncate text-gray-400">
-                inscrits
+                Likes
               </p>
             </div>
           </div>
@@ -37,16 +37,16 @@
             <div class="flex-shrink-0">
               <img
                 class="w-8 h-8 rounded-full"
-                src="@/assets/banner.png"
+                src="https://placehold.co/600x600/31AADD/png"
                 alt="Bonnie image"
               >
             </div>
             <div class="flex-1 min-w-0 ms-4">
               <p class="text-sm font-medium truncate text-white">
-                Effets spéciaux
+                "Life is what happens when you're busy making other plans."
               </p>
               <p class="text-sm truncate text-gray-400">
-                meilleurs effets speciaux, flahs est à l'honneur
+                Mollie Minnie
               </p>
             </div>
             <div>
@@ -54,7 +54,7 @@
                 20
               </div>
               <p class="text-sm truncate text-gray-400">
-                inscrits
+                Likes
               </p>
             </div>
           </div>
@@ -64,16 +64,16 @@
             <div class="flex-shrink-0">
               <img
                 class="w-8 h-8 rounded-full"
-                src="@/assets/banner.png"
+                src="https://placehold.co/600x600/pink/white"
                 alt="Michael image"
               >
             </div>
             <div class="flex-1 min-w-0 ms-4">
               <p class="text-sm font-medium truncate text-white">
-                Cheat code
+                "The best way to predict the future is to invent it."
               </p>
               <p class="text-sm truncate text-gray-400">
-                one punch man, solo leveling, isekai
+                Celia Robbins
               </p>
             </div>
             <div>
@@ -81,7 +81,7 @@
                 2320
               </div>
               <p class="text-sm truncate text-gray-400">
-                inscrits
+                Likes
               </p>
             </div>
           </div>
@@ -91,16 +91,16 @@
             <div class="flex-shrink-0">
               <img
                 class="w-8 h-8 rounded-full"
-                src="@/assets/banner.png"
+                src="https://placehold.co/600x600/orange/white"
                 alt="Lana image"
               >
             </div>
             <div class="flex-1 min-w-0 ms-4">
               <p class="text-sm font-medium truncate text-white">
-                Disney party
+                "Success is not final, failure is not fatal: It is the courage to continue that counts."
               </p>
               <p class="text-sm truncate text-gray-400">
-                disney ce soir? meilleur films disney
+                Maimouna Thiam
               </p>
             </div>
             <div>
@@ -108,7 +108,7 @@
                 30
               </div>
               <p class="text-sm truncate text-gray-400">
-                inscrits
+                Likes
               </p>
             </div>
           </div>
@@ -118,16 +118,16 @@
             <div class="flex-shrink-0">
               <img
                 class="w-8 h-8 rounded-full"
-                src="@/assets/banner.png"
+                src="https://placehold.co/600x600/pink/white"
                 alt="Thomas image"
               >
             </div>
             <div class="flex-1 min-w-0 ms-4">
               <p class="text-sm font-medium truncate text-white">
-                Anime razzia
+                "It does not matter how slowly you go as long as you do not stop."
               </p>
               <p class="text-sm truncate text-gray-400">
-                Meilleur anime 2024
+                Marie Collins
               </p>
             </div>
             <div>
@@ -135,7 +135,7 @@
                 3200
               </div>
               <p class="text-sm truncate text-gray-400">
-                inscrits
+                Likes
               </p>
             </div>
           </div>
@@ -152,7 +152,4 @@ export default {
 </script>
 
 <style>
-.card-list {
-  background-color: #18202d;
-}
 </style>

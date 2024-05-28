@@ -26,7 +26,7 @@
         <input
             id="default-search"
             type="search"
-            class="block w-full p-1 ps-10 text-sm border outline-none rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+            class="block w-full opacity-40 p-2 ps-10 text-sm border outline-none rounded-[12px] bg-gray-900 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
             placeholder="Rechercher des citations..."
             required
         >
