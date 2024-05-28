@@ -1,25 +1,3 @@
-<script setup lang="ts">
-import { onBeforeMount, ref } from 'vue'
-import CardComponent from '../components/CardComponent.vue'
-
-import QuotesService from '@/services/quotes'
-import { useRouter } from 'vue-router'
-import CardListComponent from '@/components/cardListComponent.vue'
-import AddNewQuoteComponent from "@/components/AddNewQuoteComponent.vue";
-
-const router = useRouter()
-const quotesList = ref([])
-
-const getQuotes = async () => {
-  const response = await QuotesService.getQuotes()
-  quotesList.value = response
-}
-
-onBeforeMount(() => {
-  getQuotes()
-})
-</script>
-
 <template>
   <div class="Home">
     <div class="main-section flex flex-row flex-nowrap gap-5 mt-10">
@@ -34,7 +12,7 @@ onBeforeMount(() => {
             <div
                 v-for="(quote, index) in quotesList"
                 :key="index">
-              <CardComponent :quote="quote"/>
+              <CardComponent :quote="quote" @open-socials-modal="openSocialsModal"/>
             </div>
           </div>
         </div>
@@ -49,8 +27,47 @@ onBeforeMount(() => {
         </div>
       </div>
     </div>
+    <socials-modal v-if="displaySocialsModal" @close="closeSocialsModal"></socials-modal>
   </div>
 </template>
+
+<script>
+import CardComponent from '../components/CardComponent.vue'
+import QuotesService from '@/services/quotes'
+import CardListComponent from '@/components/cardListComponent.vue'
+import AddNewQuoteComponent from "@/components/AddNewQuoteComponent.vue";
+import SocialsModal from "@/components/SocialsModal.vue";
+
+export default {
+  components: {
+    CardListComponent,
+    AddNewQuoteComponent,
+    SocialsModal,
+    CardComponent
+  },
+  data() {
+    return {
+      displaySocialsModal: false,
+      quotesList: {},
+    }
+  },
+  beforeMount() {
+    this.getQuotes();
+  },
+  methods: {
+    async getQuotes() {
+      const response = await QuotesService.getQuotes()
+      this.quotesList = response;
+    },
+    openSocialsModal() {
+      this.displaySocialsModal = true;
+    },
+    closeSocialsModal() {
+      this.displaySocialsModal = false;
+    }
+  }
+}
+</script>
 
 
 <style lang="scss">
