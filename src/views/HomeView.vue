@@ -4,7 +4,7 @@
       <div class="left-section flex flex-col gap-5">
         <div class="top-content">
           <div class="add-new-quote">
-            <add-new-quote-component></add-new-quote-component>
+            <add-new-quote-component @update-quote-list="getQuotes(null)"></add-new-quote-component>
           </div>
         </div>
         <div class="bottom-content">
