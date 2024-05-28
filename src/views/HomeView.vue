@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <socials-modal v-if="displaySocialsModal" @close="closeSocialsModal"></socials-modal>
+    <socials-modal v-if="displaySocialsModal" @close="closeSocialsModal" :quote="sharedQuote"></socials-modal>
   </div>
 </template>
 
@@ -45,22 +45,30 @@ export default {
     SocialsModal,
     CardComponent
   },
+  props: ['searchText'],
   data() {
     return {
       displaySocialsModal: false,
       quotesList: {},
+      sharedQuote: null,
     }
   },
   beforeMount() {
-    this.getQuotes();
+    this.getQuotes(null);
+  },
+  watch: {
+    searchText() {
+      this.getQuotes(this.searchText)
+    }
   },
   methods: {
-    async getQuotes() {
-      const response = await QuotesService.getQuotes()
+    async getQuotes(filter) {
+      const response = await QuotesService.getQuotes(filter)
       this.quotesList = response;
     },
-    openSocialsModal() {
+    openSocialsModal(quote) {
       this.displaySocialsModal = true;
+      this.sharedQuote = quote;
     },
     closeSocialsModal() {
       this.displaySocialsModal = false;

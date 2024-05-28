@@ -26,6 +26,7 @@
         <input
             id="default-search"
             type="search"
+            v-model="searchText"
             class="block w-full opacity-40 p-2 ps-10 text-sm border outline-none rounded-[12px] bg-gray-900 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
             placeholder="Rechercher des citations..."
             required
@@ -37,7 +38,26 @@
 
 <script>
 export default {
-  name: "SearchBar"
+  name: "SearchBar",
+  data() {
+    return {
+      searchText: null,
+      timeout: null,
+    }
+  },
+  watch: {
+    searchText() {
+      if (this.timeout) clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        this.search();
+      }, 500)
+    }
+  },
+  methods: {
+    search() {
+      this.$emit('search-quote', this.searchText);
+    }
+  }
 }
 </script>
 

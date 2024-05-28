@@ -4,7 +4,7 @@
       <span class="text-sm sm:text-center text-gray-400">© 2024 <a
         href="https://flowbite.com/"
         class="hover:underline"
-      >Bubble™</a>. Tous droits réservés.
+      >QuoteTier™</a>. Tous droits réservés.
       </span>
       <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 sm:mt-0">
         <li>

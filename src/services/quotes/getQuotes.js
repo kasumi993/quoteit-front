@@ -1,7 +1,7 @@
 import global from '/src/main'
 
-export default () => new Promise((res, rej) => {
-    global.$http.get('/quotes')
+export default (searchText) => new Promise((res, rej) => {
+    global.$http.get(`/quotes?search=${searchText}`)
         .then((response) => {
             res(response.data);
             console.log(response.data);

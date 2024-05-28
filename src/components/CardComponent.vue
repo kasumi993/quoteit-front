@@ -27,7 +27,7 @@ export default {
       this.liked = !this.liked;
     },
     shareQuote() {
-      this.$emit('open-socials-modal', true);
+      this.$emit('open-socials-modal', this.quote);
     }
   }
 }

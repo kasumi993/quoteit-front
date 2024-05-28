@@ -53,7 +53,7 @@
             /></svg>
           </button>
         </div>
-        <search-bar></search-bar>
+        <search-bar @search-quote="searchQuote"></search-bar>
       </div>
     </nav>
   </header>
@@ -77,6 +77,9 @@ export default {
     },
     login() {
       this.$router.push('/login');
+    },
+    searchQuote(searchText) {
+      this.$emit('search-quote', searchText);
     }
   }
 }
