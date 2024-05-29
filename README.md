@@ -22,6 +22,13 @@ This is the backend application for QuoteTier, a platform for managing and shari
 ## Requirements
 
 - Node 18.17+
+- QuoteTier-BackEnd (
+   ```sh
+  git clone https://github.com/kasumi993/quotetier-backend.git
+  cd quotetier-backend
+  docker-compose up --build
+    ```
+  )
 
 ### Technologies Used: Vue.JS (3), Sass, TailwindCss, Vitest, Cypress
 
