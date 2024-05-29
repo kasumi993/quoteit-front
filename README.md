@@ -2,6 +2,9 @@
 
 This is the backend application for QuoteTier, a platform for managing and sharing inspirational quotes. The backend is built using Flask and PostgreSQL, and it includes functionality for adding, retrieving, liking, unliking, and deleting quotes.
 
+
+<img width="1437" alt="Screenshot 2024-05-29 at 09 40 10" src="https://github.com/kasumi993/quoteit-front/assets/42519251/90bd63e3-2a40-46f9-a1e4-3217ed8b0a87">
+
 ## Table of Contents
 
 - [Features](#features)
