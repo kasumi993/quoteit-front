@@ -2,7 +2,9 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', () => {
-  const authenticated = ref(false)
+  // TODO
+  // We will not handle auth so here we consider that we are authenticated for the moment
+  const authenticated = ref(true)
   const token = ref('')
   // We will not handle auth so here is a user we can use for the moment
   const user = ref({
