@@ -4,6 +4,7 @@ export default (params) => new Promise((res, rej) => {
     const data = {
         author: params.author,
         content: params.content,
+        creator: params.creator,
     };
     Global.$http.post('/quotes', data)
         .then((response) => {

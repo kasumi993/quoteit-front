@@ -4,7 +4,13 @@ import { defineStore } from 'pinia'
 export const useAuthStore = defineStore('auth', () => {
   const authenticated = ref(false)
   const token = ref('')
-  const user = ref([])
+  // We will not handle auth so here is a user we can use for the moment
+  const user = ref({
+    name: 'Marie Benjamin',
+    pseudo: '@Marie_prinpri',
+    description: 'A happy happy rabbit'
+  })
+
   function authenticate() {
     authenticated.value = true
   }
@@ -26,5 +32,6 @@ export const useAuthStore = defineStore('auth', () => {
     authenticated.value = false
   }
 
-  return { authenticated, login, logout, check }
+
+  return { authenticated, user, login, logout, check }
 })

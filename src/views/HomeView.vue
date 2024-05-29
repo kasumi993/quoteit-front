@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="bottom-content">
-          <div class="mt-12 grid grid-cols-3 gap-8">
+          <div class="mt-12 grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
             <div
                 v-for="(quote, index) in quotesList"
                 :key="index">

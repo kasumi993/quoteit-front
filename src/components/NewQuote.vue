@@ -42,9 +42,14 @@
 
 <script>
 import QuotesService from '@/services/quotes'
+import {useAuthStore} from "@/stores/authStore.js";
 
 export default {
   name: "newQuote",
+  setup() {
+    const authStore = useAuthStore();
+    return {authStore};
+  },
   data() {
     return {
       content: '',
@@ -54,7 +59,7 @@ export default {
   methods: {
     publishQuote() {
       if (this.author && this.content.length > 5) {
-        QuotesService.saveQuote({author: this.author, content: this.content})
+        QuotesService.saveQuote({author: this.author, content: this.content, creator: this.authStore.user.pseudo})
             .then(() => {
               this.$refs.publishBtn.textContent = 'Publié !';
               this.$refs.publishBtn.classList.remove('bg-blue-500');
